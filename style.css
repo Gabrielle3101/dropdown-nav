@@ -53,6 +53,7 @@ nav ul li a:hover {
 
 .nav-links {
     display: none;
+    margin-top: 50px;
 }
 
 .register a {
