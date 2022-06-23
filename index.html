@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Gabbie | Intro section with dropdown navigation</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <nav>
+      <a href="#"><img src="/intro-section-with-dropdown-navigation-main/images/logo.svg" alt=""></a>
+      <div class="flex">
+        <div id="sideNav" class="side-nav">
+          <ul>
+            <li><p class="closed active" onclick="dropdown">Features <img src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg" alt=""></p>
+            <ul class="nav-links open">
+              <li><img src="/intro-section-with-dropdown-navigation-main/images/icon-todo.svg" alt=""> Todo List</li>
+              <li><img src="/intro-section-with-dropdown-navigation-main/images/icon-calendar.svg" alt=""> Calendar</li>
+              <li><img src="/intro-section-with-dropdown-navigation-main/images/icon-reminders.svg" alt=""> Reminders</li>
+              <li><img src="/intro-section-with-dropdown-navigation-main/images/icon-planning.svg" alt=""> Planning</li>
+            </ul>
+          </li>
+            <li><p class="closed active" onclick="dropdown">Company <img src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg" alt=""></p>
+            <ul class="nav-links open">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+            </li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">About</a></li>
+          </ul>
+          <div class="register">
+            <a href="#">Login</a>
+            <button>Register</button>
+          </div>
+        </div>
+        <div id="menuBtn">
+          <img src="/intro-section-with-dropdown-navigation-main/images/icon-menu.svg" alt="" id="menu">
+      </div>
+      </div>
+    </nav>
+  </div>
+  <div class="hero">
+    <div class="texts">
+      <h1>Make remote work</h1>
+      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button>Learn more</button>
+      <div class="clients">
+        <img src="/intro-section-with-dropdown-navigation-main/images/client-databiz.svg" alt="">
+        <img src="/intro-section-with-dropdown-navigation-main/images/client-audiophile.svg" alt="">
+        <img src="/intro-section-with-dropdown-navigation-main/images/client-meet.svg" alt="">
+        <img src="/intro-section-with-dropdown-navigation-main/images/client-maker.svg" alt="">
+      </div>
+    </div>
+    <div class="img">
+      <img src="/intro-section-with-dropdown-navigation-main/images/image-hero-desktop.png" alt="">
+    </div>
+  </div>
+  <div>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Gabrielle Duere</a>.
+    </p>
+  </div>
+  <script>
+    var menuBtn = document.getElementById('menuBtn')
+    var menuBtn = document.getElementsByClassName('side-nav')
+    var menuBtn = document.getElementById('menu')
+
+    sideNav.style.right = "-1000px"
+
+    menuBtn.onclick = function(){
+        if (sideNav.style.right == '-1000px'){
+            sideNav.style.right = '-30%';
+            menu.src = "/intro-section-with-dropdown-navigation-main/images/icon-close-menu.svg";
+        }
+        else {
+            sideNav.style.right = "-1000px";
+            menu.src = "/intro-section-with-dropdown-navigation-main/images/icon-menu.svg";
+        }
+    }
+    var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 1000,
+    speedAsDuration: true
+    });
+  </script>
+</body>
+</html>
